@@ -7,6 +7,7 @@ import { clerkMiddleware } from "@clerk/express";
 import dns from "node:dns";
 import User from "./models/user.model.js";
 import { connectDB } from "./lib/db.js";
+import job from "./lib/cron.js";
 
 dns.setServers(["8.8.8.8", "8.8.4.4"]);
 
@@ -51,6 +52,7 @@ app.listen(PORT, () => {
   connectDB();
   console.log("Server is up and running on PORT:", PORT);
 
-  if (process.env.NODE_ENV === "production") job.start();
-  
+  if (process.env.NODE_ENV === "production") {
+    job.start();
+  }
 });
