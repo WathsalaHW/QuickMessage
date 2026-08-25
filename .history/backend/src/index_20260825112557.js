@@ -39,8 +39,8 @@ app.get("/health", (req, res) => {
 if (fs.existsSync(publicDir)) {
   app.use(express.static(publicDir));
 
-  // Express 5 named splat parameter for SPA catch-all
-  app.get("/*splat", (req, res, next) => {
+  // Catch-all route to serve the React SPA for any unmatched path
+  app.get("*", (req, res, next) => {
     res.sendFile(path.join(publicDir, "index.html"), (err) => {
       if (err) next(err);
     });
@@ -50,7 +50,4 @@ if (fs.existsSync(publicDir)) {
 app.listen(PORT, () => {
   connectDB();
   console.log("Server is up and running on PORT:", PORT);
-
-  if (process.env.NODE_ENV === "production") job.start();
-  
 });
