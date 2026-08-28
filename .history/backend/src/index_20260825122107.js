@@ -7,7 +7,6 @@ import { clerkMiddleware } from "@clerk/express";
 import dns from "node:dns";
 import User from "./models/user.model.js";
 import { connectDB } from "./lib/db.js";
-import clerkWebhook from "./webhooks/clerk.webhook.js";
 import job from "./lib/cron.js";
 
 dns.setServers(["8.8.8.8", "8.8.4.4"]);
@@ -19,8 +18,6 @@ const FRONTEND_URL = process.env.FRONTEND_URL;
 
 // Path to the public directory where the frontend dist was copied
 const publicDir = path.join(process.cwd(), "public");
-
-app.use("/api/webhooks/clerk", express.raw({ type: "application/json "}), clerkWebhook);
 
 app.use(express.json());
 app.use(

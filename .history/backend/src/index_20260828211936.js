@@ -7,7 +7,6 @@ import { clerkMiddleware } from "@clerk/express";
 import dns from "node:dns";
 import User from "./models/user.model.js";
 import { connectDB } from "./lib/db.js";
-import clerkWebhook from "./webhooks/clerk.webhook.js";
 import job from "./lib/cron.js";
 
 dns.setServers(["8.8.8.8", "8.8.4.4"]);
