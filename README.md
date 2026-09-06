@@ -1,12 +1,12 @@
 # 💬 Full Stack Real-Time Chat App 🚀
 
-![Demo App](/frontend/public/screenshot-for-readme.png)
+![Demo App](/frontend/public/readme.jpeg)
 
 ---
 
 ## ✨ Highlights:
 
-- 💬 Full Stack Real-Time Chat Application built from scratch
+- 💬 Full Stack Chat Application built from scratch
 - ⚛️ Frontend with React, Tailwind CSS & Hero UI
 - 🚀 Backend with Node.js & Express.js
 - 🔐 Authentication with Clerk
@@ -30,33 +30,6 @@
 - 📂 Full Source Code Included
 - 🎯 Resume-Ready Production-Style Project
 
----
-
-## 🧪 Environment Variables
-
-### Backend (`/backend`)
-
-```bash
-PORT=<your_port>
-
-NODE_ENV=<development_or_production>
-
-MONGO_URI=<your_mongodb_connection_string>
-
-CLERK_PUBLISHABLE_KEY=<your_clerk_publishable_key>
-CLERK_SECRET_KEY=<your_clerk_secret_key>
-CLERK_WEBHOOK_SIGNING_SECRET=<your_clerk_webhook_signing_secret>
-
-IMAGEKIT_PRIVATE_KEY=<your_imagekit_private_key>
-
-FRONTEND_URL=<your_frontend_url>
-```
-
-### Frontend (`/frontend`)
-
-```bash
-VITE_CLERK_PUBLISHABLE_KEY=<your_clerk_publishable_key>
-```
 
 ---
 
