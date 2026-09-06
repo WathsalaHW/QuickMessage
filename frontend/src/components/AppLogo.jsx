@@ -3,7 +3,7 @@ export const APP_NAME = "QuickMessage";
 export function AppLogo({ className = "", size = 32, alt = APP_NAME }) {
   return (
     <img
-      src="/logo.JPEG"
+      src="/logo.jpeg"
       alt={alt}
       width={size}
       height={size}
